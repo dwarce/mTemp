@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using mTemp_API.Adapters.DTO;
+using mTemp_API.Adapters.Util;
+using mTemp_API.Domain.Models;
+using mTemp_API.Domain.Services;
 
 namespace mTemp_API.Adapters.Controllers
 {
@@ -6,28 +10,36 @@ namespace mTemp_API.Adapters.Controllers
     [Route("[controller]")]
     public class TemperatureMeasurementController : ControllerBase
     {
-        //private static readonly string[] Summaries = new[]
-        //{
-        //    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        //};
+        private readonly ITemperatureMeasurementService _temperatureMeasurementService;
 
-        //private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<TemperatureMeasurementController> _logger;
 
-        //public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        //{
-        //    _logger = logger;
-        //}
 
-        //[HttpGet(Name = "GetWeatherForecast")]
-        //public IEnumerable<WeatherForecast> Get()
-        //{
-        //    return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        //    {
-        //        Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-        //        TemperatureC = Random.Shared.Next(-20, 55),
-        //        Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        //    })
-        //    .ToArray();
-        //}
+        public TemperatureMeasurementController(ILogger<TemperatureMeasurementController> logger, ITemperatureMeasurementService temperatureMeasurementService)
+        {
+            _logger = logger;
+            _temperatureMeasurementService = temperatureMeasurementService;
+        }
+
+
+        [HttpGet]
+        public ActionResult<IEnumerable<TemperatureMeasurementDTO>> GetAllTemperatureMeasurements()
+        {
+            IEnumerable<TemperatureMeasurementDTO> measurements = _temperatureMeasurementService
+                .GetAllMeasurements()
+                .Select(ConverterDTO.TemperatureMeasurementToDTO)
+                .ToList();
+            return Ok(measurements);
+        }
+
+
+        [HttpPost]
+        public ActionResult<TemperatureMeasurementDTO> AddTemperatureMeasurement([FromBody] TemperatureMeasurementDTO temperatureMeasurementDTO)
+        {
+            TemperatureMeasurement measurementToAdd = ConverterDTO.TemperatureMeasurementToDomain(temperatureMeasurementDTO);
+            TemperatureMeasurement addedMeasurement = _temperatureMeasurementService.AddMeasurement(measurementToAdd);
+            return Ok(ConverterDTO.TemperatureMeasurementToDTO(addedMeasurement));
+
+        }
     }
 }

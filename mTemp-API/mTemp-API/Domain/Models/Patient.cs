@@ -15,10 +15,10 @@ namespace mTemp_API.Domain.Models
         [StringLength(100, MinimumLength = 1, ErrorMessage = "Last name must not be empty.")]
         public string LastName { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "Patient email is required.")]
+        [StringLength(200, MinimumLength = 1, ErrorMessage = "Emailmust not be empty.")]
         public string Email { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Patient date of birth is required.")]
-        public required DateOnly DateOfBirth { get; set; }
 
     }
 }

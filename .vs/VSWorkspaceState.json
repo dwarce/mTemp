@@ -4,13 +4,13 @@
     "\\mTemp-API",
     "\\mTemp-API\\mTemp-API",
     "\\mTemp-API\\mTemp-API\\Adapters",
-    "\\mTemp-API\\mTemp-API\\Adapters\\Util",
+    "\\mTemp-API\\mTemp-API\\Adapters\\Controllers",
+    "\\mTemp-API\\mTemp-API\\Adapters\\Middleware",
     "\\mTemp-API\\mTemp-API\\Domain",
-    "\\mTemp-API\\mTemp-API\\Domain\\Repositories",
-    "\\mTemp-API\\mTemp-API\\Domain\\Repositories\\Implementations",
-    "\\mTemp-API\\mTemp-API\\Domain\\Services",
-    "\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations"
+    "\\mTemp-API\\mTemp-API\\Domain\\Exceptions",
+    "\\mTemp-API\\mTemp-API\\Domain\\Models",
+    "\\mTemp-API\\mTemp-API\\Properties"
   ],
-  "SelectedNode": "\\mTemp-API\\mTemp-API\\Adapters\\DTO\\PatientDTO.cs",
+  "SelectedNode": "\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations\\PatientService.cs",
   "PreviewInSolutionExplorer": false
 }

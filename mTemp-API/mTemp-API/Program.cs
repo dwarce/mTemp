@@ -1,3 +1,4 @@
+using mTemp_API.Adapters.Middleware;
 using mTemp_API.Domain.Repositories;
 using mTemp_API.Domain.Repositories.Implementations;
 using mTemp_API.Domain.Services;
@@ -18,12 +19,18 @@ builder.Services.AddScoped<ITemperatureMeasurementService, TemperatureMeasuremen
 
 var app = builder.Build();
 
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+// Register the custom exception handling middleware
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseAuthorization();
 

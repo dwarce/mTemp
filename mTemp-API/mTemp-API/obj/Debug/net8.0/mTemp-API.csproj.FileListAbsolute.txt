@@ -28,10 +28,10 @@ C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\staticwebassets\msbuild
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.mTemp-API.props
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.mTemp-API.props
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\staticwebassets.pack.json
-C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\mTemp-API.csproj.Up2Date
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\mTemp-API.dll
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\refint\mTemp-API.dll
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\mTemp-API.pdb
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\mTemp-API.genruntimeconfig.cache
 C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\ref\mTemp-API.dll
+C:\DEV\GitHub\mTemp\mTemp-API\mTemp-API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

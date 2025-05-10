@@ -1,5 +1,8 @@
+using mTemp_API.Adapters.Util;
+using mTemp_API.Domain.Exceptions;
 using mTemp_API.Domain.Models;
 using mTemp_API.Domain.Repositories;
+using System.Xml.Linq;
 
 namespace mTemp_API.Domain.Services.Implementations
 {
@@ -29,13 +32,12 @@ namespace mTemp_API.Domain.Services.Implementations
         /// </summary>
         private void checkValidPatient(Patient patient) {
 
-
-            // check if date of birth is in future
-            DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now);
-            if (patient.DateOfBirth.CompareTo(currentDate) < 1)
+            Patient? existingPatientWithEmail = _patientsRepository.FindPatientByEmail(patient.Email);
+            if (existingPatientWithEmail != null)
             {
-                throw new ArgumentException("Patient has invalid date of birth");
+                throw new InvalidPatientDataException($"A patient with email {patient.Email} already exists");
             }
+
         }
     }
 }

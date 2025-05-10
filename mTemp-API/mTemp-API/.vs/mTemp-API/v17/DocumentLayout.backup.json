@@ -3,12 +3,88 @@
   "WorkspaceRootPath": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\services\\implementations\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\services\\implementations\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\repositories\\implementations\\inmemorypatientsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\repositories\\implementations\\inmemorypatientsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\repositories\\ipatientsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\repositories\\ipatientsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\adapters\\util\\converterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:adapters\\util\\converterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\adapters\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:adapters\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\adapters\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:adapters\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\repositories\\implementations\\inmemorytemperaturemeasurementsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\repositories\\implementations\\inmemorytemperaturemeasurementsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\models\\temperaturemeasurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\models\\temperaturemeasurement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\exceptions\\patientnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\exceptions\\patientnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\services\\implementations\\temperaturemeasurementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\services\\implementations\\temperaturemeasurementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\domain\\repositories\\itemperaturemeasurementsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:domain\\repositories\\itemperaturemeasurementsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\adapters\\controllers\\temperaturemeasurementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:adapters\\controllers\\temperaturemeasurementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\adapters\\dto\\temperaturemeasurementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:adapters\\dto\\temperaturemeasurementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Middleware\\ExceptionHandlingMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Adapters\\Middleware\\ExceptionHandlingMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\InvalidPatientDataException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Exceptions\\InvalidPatientDataException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\InvalidTemperatureMeasuementDataException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Exceptions\\InvalidTemperatureMeasuementDataException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|c:\\dev\\github\\mtemp\\mtemp-api\\mtemp-api\\mtemp-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{417C9904-CDA8-4441-95C2-C556623DA596}|mTemp-API.csproj|solutionrelative:mtemp-api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +94,279 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "InMemoryPatientsRepository.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\Implementations\\InMemoryPatientsRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\Implementations\\InMemoryPatientsRepository.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\Implementations\\InMemoryPatientsRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\Implementations\\InMemoryPatientsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:09:14.08Z",
+              "WhenOpened": "2025-05-10T18:56:33.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "IPatientsRepository.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\IPatientsRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IPatientsRepository.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\IPatientsRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IPatientsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:55:59.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Patient.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Models\\Patient.cs",
+              "RelativeToolTip": "Domain\\Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:43:58.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientDTO.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\DTO\\PatientDTO.cs",
+              "RelativeDocumentMoniker": "Adapters\\DTO\\PatientDTO.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\DTO\\PatientDTO.cs",
+              "RelativeToolTip": "Adapters\\DTO\\PatientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:17:06.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "Adapters\\Controllers\\PatientsController.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "Adapters\\Controllers\\PatientsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:12:07.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConverterDTO.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Util\\ConverterDTO.cs",
+              "RelativeDocumentMoniker": "Adapters\\Util\\ConverterDTO.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Util\\ConverterDTO.cs",
+              "RelativeToolTip": "Adapters\\Util\\ConverterDTO.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwC8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:05:39.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TemperatureMeasurement.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Models\\TemperatureMeasurement.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\TemperatureMeasurement.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Models\\TemperatureMeasurement.cs",
+              "RelativeToolTip": "Domain\\Models\\TemperatureMeasurement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:02:03.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InMemoryTemperatureMeasurementsRepository.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\Implementations\\InMemoryTemperatureMeasurementsRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\Implementations\\InMemoryTemperatureMeasurementsRepository.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\Implementations\\InMemoryTemperatureMeasurementsRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\Implementations\\InMemoryTemperatureMeasurementsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:59:41.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ITemperatureMeasurementsRepository.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\ITemperatureMeasurementsRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\ITemperatureMeasurementsRepository.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Repositories\\ITemperatureMeasurementsRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\ITemperatureMeasurementsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:59:21.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations\\PatientService.cs",
+              "RelativeDocumentMoniker": "Domain\\Services\\Implementations\\PatientService.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations\\PatientService.cs",
+              "RelativeToolTip": "Domain\\Services\\Implementations\\PatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:49:29.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Adapters\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Adapters\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:43:19.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PatientNotFoundException.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\PatientNotFoundException.cs",
+              "RelativeDocumentMoniker": "Domain\\Exceptions\\PatientNotFoundException.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\PatientNotFoundException.cs",
+              "RelativeToolTip": "Domain\\Exceptions\\PatientNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:37:26.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TemperatureMeasurementService.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations\\TemperatureMeasurementService.cs",
+              "RelativeDocumentMoniker": "Domain\\Services\\Implementations\\TemperatureMeasurementService.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations\\TemperatureMeasurementService.cs",
+              "RelativeToolTip": "Domain\\Services\\Implementations\\TemperatureMeasurementService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswDIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:33:20.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T14:08:45.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TemperatureMeasurementDTO.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\DTO\\TemperatureMeasurementDTO.cs",
+              "RelativeDocumentMoniker": "Adapters\\DTO\\TemperatureMeasurementDTO.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\DTO\\TemperatureMeasurementDTO.cs",
+              "RelativeToolTip": "Adapters\\DTO\\TemperatureMeasurementDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:18:14.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TemperatureMeasurementsController.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Controllers\\TemperatureMeasurementsController.cs",
+              "RelativeDocumentMoniker": "Adapters\\Controllers\\TemperatureMeasurementsController.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Adapters\\Controllers\\TemperatureMeasurementsController.cs",
+              "RelativeToolTip": "Adapters\\Controllers\\TemperatureMeasurementsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T04:52:58.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InvalidPatientDataException.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\InvalidPatientDataException.cs",
+              "RelativeDocumentMoniker": "Domain\\Exceptions\\InvalidPatientDataException.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\InvalidPatientDataException.cs",
+              "RelativeToolTip": "Domain\\Exceptions\\InvalidPatientDataException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:47:29.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "InvalidTemperatureMeasuementDataException.cs",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\InvalidTemperatureMeasuementDataException.cs",
+              "RelativeDocumentMoniker": "Domain\\Exceptions\\InvalidTemperatureMeasuementDataException.cs",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\Domain\\Exceptions\\InvalidTemperatureMeasuementDataException.cs",
+              "RelativeToolTip": "Domain\\Exceptions\\InvalidTemperatureMeasuementDataException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T17:50:01.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-10T17:26:14.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "mTemp-API.csproj",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\mTemp-API.csproj",
+              "RelativeDocumentMoniker": "mTemp-API.csproj",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\mTemp-API.csproj",
+              "RelativeToolTip": "mTemp-API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-09T14:15:17.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\DEV\\GitHub\\mTemp\\mTemp-API\\mTemp-API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-09T14:16:52.675Z",
               "EditorCaption": ""
             }
           ]

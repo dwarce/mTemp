@@ -10,6 +10,9 @@ namespace mTemp_API.Domain.Repositories
 
         /// <returns>Patient that matches the id, null if none of the patients match the id</returns>
         Patient? GetPatientById(int id);
+
+        /// <returns>Patient that matches the email, null if none of the patients match the email</returns>
+        Patient? FindPatientByEmail(string email);
         
         /// <summary>
         /// persists the patient to the database

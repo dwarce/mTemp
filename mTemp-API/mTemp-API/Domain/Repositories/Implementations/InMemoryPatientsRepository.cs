@@ -7,12 +7,21 @@ namespace mTemp_API.Domain.Repositories.Implementations
 
         private List<Patient> _patients = new() { };
 
+
         public IEnumerable<Patient> GetAllPatients() => _patients;
+
 
         public Patient? GetPatientById(int id)
         {
             return _patients.Where(p => p.Id == id).FirstOrDefault();
         }
+
+
+        public Patient? FindPatientByEmail(string email)
+        {
+            return _patients.Where(p => p.Email.Equals(email)).FirstOrDefault();
+        }
+
 
         public Patient AddPatient(Patient patient) {
             patient = sanitizePatient(patient);

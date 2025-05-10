@@ -7,6 +7,7 @@ namespace mTemp_API.Domain.Repositories
     {
         IEnumerable<TemperatureMeasurement> GetAllMeasurements();
         IEnumerable<TemperatureMeasurement> GetMeasurementsByPatient(Patient patient);
+        TemperatureMeasurement AddMeasurement(TemperatureMeasurement measurement);
         TemperatureMeasurement AddPatientMeasurement(Patient patient, TemperatureMeasurement measurement);
 
     }

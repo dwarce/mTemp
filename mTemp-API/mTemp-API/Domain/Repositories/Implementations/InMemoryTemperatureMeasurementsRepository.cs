@@ -16,14 +16,20 @@ namespace mTemp_API.Domain.Repositories.Implementations
             return _measurements.Where(m => m.PatientId == patient.Id);
         }
 
+        public TemperatureMeasurement AddMeasurement(TemperatureMeasurement measurement)
+        {
+            TemperatureMeasurement sanitizedMeasurement = SanitizeMeasurement(measurement);
+            sanitizedMeasurement.Id = FindHighestId() + 1;
+            _measurements.Add(sanitizedMeasurement);
+            return sanitizedMeasurement;
+        }
+
         public TemperatureMeasurement AddPatientMeasurement(Patient patient, TemperatureMeasurement measurement)
         {
             TemperatureMeasurement sanitizedMeasurement = SanitizeMeasurement(measurement);
             sanitizedMeasurement.PatientId = patient.Id;
             sanitizedMeasurement.Id = FindHighestId() + 1;
-
             _measurements.Add(sanitizedMeasurement);
-
             return sanitizedMeasurement;
 
         }

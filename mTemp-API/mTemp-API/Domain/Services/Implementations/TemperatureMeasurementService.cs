@@ -1,3 +1,4 @@
+using mTemp_API.Domain.Exceptions;
 using mTemp_API.Domain.Models;
 using mTemp_API.Domain.Repositories;
 
@@ -21,7 +22,7 @@ namespace mTemp_API.Domain.Services.Implementations
             Patient? patientById = _patientsRepository.GetPatientById(patientId);
             if (patientById == null)
             {
-                throw new ArgumentException("Patient not found");
+                throw new PatientNotFoundException(patientId);
             }
             return _temperatureMeasurementsRepository.GetMeasurementsByPatient(patientById);
         }
@@ -35,16 +36,27 @@ namespace mTemp_API.Domain.Services.Implementations
 
         public TemperatureMeasurement AddMeasurement(TemperatureMeasurement measurement)
         {
-            Patient? patientById = _patientsRepository.GetPatientById(measurement.PatientId);
-            if (patientById == null)
-            {
-                throw new ArgumentException("Patient not found");
-            }
-
             checkValidMeasurement(measurement);
             measurement.Timestamp = DateTime.UtcNow; // Set to current UTC time
 
-            return _temperatureMeasurementsRepository.AddPatientMeasurement(patientById, measurement);
+
+            // if patient id is set, we check if the patient exists and call the AddPatientMeasurement method, otherwise we call the AddMeasurement method
+            if (measurement.PatientId != null) 
+            {
+                int patientId = measurement.PatientId.Value;
+
+                Patient? patientById = _patientsRepository.GetPatientById(patientId);
+                if (patientById == null)
+                {
+                    throw new PatientNotFoundException(patientId);
+                }
+
+                return _temperatureMeasurementsRepository.AddPatientMeasurement(patientById, measurement);
+            }
+
+            return _temperatureMeasurementsRepository.AddMeasurement(measurement);
+
+
 
         }
 
@@ -56,15 +68,15 @@ namespace mTemp_API.Domain.Services.Implementations
         {
             if (measurement == null)
             {
-                throw new ArgumentNullException(nameof(measurement), "Measurement cannot be null");
+                throw new InvalidTemperatureMeasurementDataException("Measurement cannot be null");
             }
             if (measurement.MeasuredTemperature < 0 || measurement.MeasuredTemperature > 50)
             {
-                throw new ArgumentOutOfRangeException(nameof(measurement.MeasuredTemperature), "Measured temperature must be between 0 and 50 degrees Celsius");
+                throw new InvalidTemperatureMeasurementDataException("Measured temperature must be between 0 and 50 degrees Celsius");
             }
             if (string.IsNullOrWhiteSpace(measurement.MeasuredMethod))
             {
-                throw new ArgumentException("Measured method cannot be null or empty");
+                throw new InvalidTemperatureMeasurementDataException("Measured method cannot be null or empty");
             }
 
         }

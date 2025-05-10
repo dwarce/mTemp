@@ -36,7 +36,7 @@ namespace mTemp_API.Adapters.Util
             {
                 FirstName = patient.FirstName,
                 LastName = patient.LastName,
-                DateOfBirth = patient.DateOfBirth
+                email = patient.Email,
             };
 
         }
@@ -47,7 +47,7 @@ namespace mTemp_API.Adapters.Util
             {
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
-                DateOfBirth = dto.DateOfBirth
+                Email = dto.email,
             };
         }
     }
