@@ -8,12 +8,12 @@
 		<Button @click="clearSelectedPatient" label="clear" severity="contrast"></Button>
 	</div>
 
-    <form @submit.prevent="submitTemperature">
-		<label for="temperature">Temperature:</label>
-		<input type="number" v-model="temperature" step="0.01" />
+    <form>
+		<label for="temperature">Temperature (°C):</label>
+		<input type="number" v-model="temperature" step="0.01" /> 
 		<SelectButton v-model="selectedMeasuredMethod" :options="measurementMethodOptions" />
 
-      	<button type="submit">Submit</button>
+      	<Button class="submit-button" label="Submit" @click="submitTemperature"></Button>
     </form>
   </div>
 </template>
@@ -26,7 +26,7 @@ import { TemperatureMeasurement } from '../models/TemperatureMeasurement';
 import { Patient } from '../models/Patient';
 import { PatientService } from '../services/PatientService';
 import { NotificationService } from '../services/NotificationService';
-import {TemperatureMeasurementService} from '../services/TemperatureMeasurementsService';
+import { TemperatureMeasurementsService } from '../services/TemperatureMeasurementsService';
 
 export default {
 	components: {
@@ -34,7 +34,7 @@ export default {
 		Button
 	},
 	setup() {
-		TemperatureMeasurementService
+		TemperatureMeasurementsService
 		const selectedMeasuredMethod = ref("Infrared");
 		const measurementMethodOptions = ref(["Infrared", "Contact (Axillary)", "Contact (Oral)", "Contact (Rectal)"]);
 		const temperature = ref<number | undefined>(undefined);
@@ -62,7 +62,7 @@ export default {
 		const submitTemperature = () => {
 			if (checkValidTemperature(temperature.value)) {
 				const measurement: TemperatureMeasurement = new TemperatureMeasurement(undefined, temperature.value!, selectedMeasuredMethod.value, undefined, currentPatient.value ? currentPatient.value.id : undefined);
-				TemperatureMeasurementService.addMeasurement(measurement);
+				TemperatureMeasurementsService.addMeasurement(measurement);
 			}
 		
 		}

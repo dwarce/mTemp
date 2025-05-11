@@ -15,7 +15,8 @@ export class TemperatureMeasurement {
   }
 
   static fromJSON(json: any): TemperatureMeasurement {
-    return new TemperatureMeasurement(json.id, json.firstName, json.lastName, json.email);
+    return new TemperatureMeasurement(json.id, json.measuredTemperature, json.measuredMethod, json.timestamp, json.patientId);
   }
+
 
 }

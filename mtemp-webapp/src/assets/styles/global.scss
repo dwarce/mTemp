@@ -10,24 +10,32 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.data-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+.list-button {
+  margin: 4px 0px;
+}
+
+.add-patient-button {
+  margin-bottom: 20px;
+}
+
 .popup-content {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 300px;
+  width: 500px;
   text-align: center;
-}
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  
-  &:hover {
-    background-color: #0056b3;
+  li {
+    color: black;
   }
 }
 

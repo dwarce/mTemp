@@ -20,6 +20,10 @@ export const PatientService = {
 	clearSelectedPatient() {
 		this.selectedPatient.value = undefined;
 	},
+
+	getLoadedPatientById(id: number): Patient | undefined {
+		return this.patients.value.find(p => p.id === id);
+	},
 	
 	async addPatient(patient: Patient) {
 		const apiUrl = import.meta.env.VITE_API_URL;
@@ -38,13 +42,14 @@ export const PatientService = {
 			NotificationService.showError("Failed to add patient", responseJson.message);
 		} else {
 			NotificationService.showSuccess("Patient added", `${patient.getFullName()}`);
+			this.getAllPatients();
 			this.togglePatientDialog(false);
 
 		}
 
 		} catch (error) {
-		console.error("Failed to add patient:", error);
-		NotificationService.showError("Failed to add patient", (error as Error).message);
+			console.error("Failed to add patient:", error);
+			NotificationService.showError("Failed to add patient", (error as Error).message);
 		}
 	},
 
@@ -71,8 +76,8 @@ export const PatientService = {
 		}
 
 		} catch (error) {
-			console.error("Failed to add patient:", error);
-			NotificationService.showError("Failed to add patient", (error as Error).message);
+			console.error("Failed to get patients:", error);
+			NotificationService.showError("Failed to get patients", (error as Error).message);
 		}  
 	}
 };

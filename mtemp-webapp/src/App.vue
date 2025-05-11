@@ -6,6 +6,9 @@
       </div>
 
       <div class="center-panel">
+
+        <h1>mTEMP</h1>
+
         <TemperatureForm  />
       </div>
 
@@ -107,6 +110,8 @@ export default {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .left-panel {
@@ -127,13 +132,5 @@ export default {
 
 /* Popup styling */
 
-
-.popup .popup-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 80%;
-}
 
 </style>
