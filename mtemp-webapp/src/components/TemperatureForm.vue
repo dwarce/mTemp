@@ -9,6 +9,9 @@
 				<Button @click="showPatientMeasurements" label="Show measurements history" severity="contrast"></Button>
 			</div>
 		</div>
+		<div v-else class="current-patient-info">
+			<span>No patient selected (to select, click on added patient)</span>
+		</div>
 
 		<form>
 			<label for="temperature">Temperature (°C):</label>
