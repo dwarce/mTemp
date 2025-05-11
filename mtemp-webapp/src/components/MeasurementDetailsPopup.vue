@@ -19,13 +19,10 @@ import { TemperatureMeasurementsService } from '../services/TemperatureMeasureme
 import { PatientService } from '../services/PatientService';
 import { Patient } from '../models/Patient';
 
-
 export default {
 	setup() {
 		const isMeasurementDetailDialogOpen = computed(() => TemperatureMeasurementsService.isMeasurementDetailDialogOpen.value);
-		const selectedMeasurement = computed(() => TemperatureMeasurementsService.selectedMeasurement.value);
-
-		
+		const selectedMeasurement = computed(() => TemperatureMeasurementsService.selectedMeasurement.value);	
 		const measurementPatient = ref<Patient | undefined>(undefined);
 
 		watch(selectedMeasurement, (newVal) => {

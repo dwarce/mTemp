@@ -17,11 +17,11 @@
       </div>
     </div>
 
-    <!-- Add Patient Form Popup -->
     <AddPatientPopup />
 
-    <!-- Measurement Details Popup -->
     <MeasurementDetailsPopup />
+
+    <PatientMeasurementHistoryPopup />
 
     <Toast position="bottom-center"/>
   </div>
@@ -34,6 +34,7 @@ import TemperatureForm from './components/TemperatureForm.vue';
 import MeasurementHistory from './components/MeasurementHistory.vue';
 import AddPatientPopup from './components/AddPatientPopup.vue';
 import MeasurementDetailsPopup from './components/MeasurementDetailsPopup.vue';
+import PatientMeasurementHistoryPopup from './components/PatientMeasurementsHistoryPopup.vue';
 import { NotificationService } from './services/NotificationService';
 import { Notification } from './models/Notification'
 import { useToast } from "primevue/usetoast";
@@ -77,16 +78,13 @@ export default {
             }
         });
   },
-  computed: {
-  },
-  methods: {
-  },
   components: {
     PatientList,
     TemperatureForm,
     MeasurementHistory,
     AddPatientPopup,
     MeasurementDetailsPopup,
+    PatientMeasurementHistoryPopup,
     Toast,
   }
 };

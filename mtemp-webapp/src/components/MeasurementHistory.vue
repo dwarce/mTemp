@@ -30,17 +30,17 @@ export default {
 
 		const allMeasurements = computed(() => TemperatureMeasurementsService.allMeasurements.value);
 
+		const viewMeasurement = (measurement: TemperatureMeasurement) => {
+			TemperatureMeasurementsService.showMeasurementInfo(measurement);			
+		}
+
 		return {
 			allMeasurements,
+			viewMeasurement
 		};
 	},
 	components: {
     	Button,
-  	},
-	methods: {
-		viewMeasurement(measurement: TemperatureMeasurement) {
-			TemperatureMeasurementsService.showMeasurementInfo(measurement);			
-		}
   	}
 };
 </script>

@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <h3>Record Temperature</h3>
+  	<div>
+    	<h3>Record Temperature</h3>
 
-	<div v-if="currentPatient">
+		<div v-if="currentPatient" class="current-patient-info">
+			<span>Selected patient: <b>{{currentPatient.getFullName()}}</b></span> 
+			<div class="buttons">
+				<Button @click="clearSelectedPatient" label="Clear selected patient" severity="contrast"></Button>
+				<Button @click="showPatientMeasurements" label="Show measurements history" severity="contrast"></Button>
+			</div>
+		</div>
 
-		<span>Selected patient: {{currentPatient.getFullName()}}</span> 
-		<Button @click="clearSelectedPatient" label="clear" severity="contrast"></Button>
-	</div>
+		<form>
+			<label for="temperature">Temperature (°C):</label>
+			<input type="number" v-model="temperature" step="0.01" /> 
+			<SelectButton v-model="selectedMeasuredMethod" :options="measurementMethodOptions" />
+			<Button class="submit-button" label="Submit" @click="submitTemperature"></Button>
+		</form>
+  	</div>
 
-    <form>
-		<label for="temperature">Temperature (°C):</label>
-		<input type="number" v-model="temperature" step="0.01" /> 
-		<SelectButton v-model="selectedMeasuredMethod" :options="measurementMethodOptions" />
-
-      	<Button class="submit-button" label="Submit" @click="submitTemperature"></Button>
-    </form>
-  </div>
 </template>
 
 <script lang="ts">
+
 import SelectButton from 'primevue/selectbutton';
 import Button from 'primevue/button';
 import { ref, computed, watch } from 'vue';
@@ -34,7 +37,6 @@ export default {
 		Button
 	},
 	setup() {
-		TemperatureMeasurementsService
 		const selectedMeasuredMethod = ref("Infrared");
 		const measurementMethodOptions = ref(["Infrared", "Contact (Axillary)", "Contact (Oral)", "Contact (Rectal)"]);
 		const temperature = ref<number | undefined>(undefined);
@@ -64,7 +66,16 @@ export default {
 				const measurement: TemperatureMeasurement = new TemperatureMeasurement(undefined, temperature.value!, selectedMeasuredMethod.value, undefined, currentPatient.value ? currentPatient.value.id : undefined);
 				TemperatureMeasurementsService.addMeasurement(measurement);
 			}
-		
+		}
+
+		const clearSelectedPatient = () => {
+			PatientService.clearSelectedPatient();
+		}
+
+		const showPatientMeasurements = () => {
+			if (currentPatient.value) {
+				TemperatureMeasurementsService.getMeasurementsByPatient(currentPatient.value.id!);
+			}
 		}
 
 		return {
@@ -72,15 +83,12 @@ export default {
 			measurementMethodOptions,
 			temperature,
 			currentPatient,
-			submitTemperature
+			submitTemperature,
+			clearSelectedPatient,
+			showPatientMeasurements
 		}
-	},
-	methods: {
-		clearSelectedPatient() {
-			PatientService.clearSelectedPatient();
-		},
-		
-		
 	}
+
 };
+
 </script>
