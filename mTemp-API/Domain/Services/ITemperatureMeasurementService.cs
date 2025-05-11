@@ -8,6 +8,8 @@ namespace mTemp_API.Domain.Services
         IEnumerable<TemperatureMeasurement> GetAllMeasurements();
         IEnumerable<TemperatureMeasurement> GetMeasurementsByPatient(int patientId);
 
+        TemperatureMeasurement GetMeasurementById(int id);
+
         /// <summary>
         /// Creates a new temperature measurement in the database
         /// </summary>

@@ -42,6 +42,13 @@ namespace mTemp_API.Adapters.Controllers
             return Ok(measurements);
         }
 
+        [HttpGet("byId")]
+        public ActionResult<TemperatureMeasurementDTO> GetTemperatureMeasurementById(int id)
+        {
+            TemperatureMeasurement measurement = _temperatureMeasurementService.GetMeasurementById(id);
+            return Ok(ConverterDTO.TemperatureMeasurementToDTO(measurement));
+        }
+
         [HttpPost]
         public ActionResult<TemperatureMeasurementDTO> AddTemperatureMeasurement([FromBody] TemperatureMeasurementDTO temperatureMeasurementDTO)
         {

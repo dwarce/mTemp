@@ -16,6 +16,11 @@ namespace mTemp_API.Domain.Repositories.Implementations
             return _measurements.Where(m => m.PatientId == patient.Id);
         }
 
+        public TemperatureMeasurement? GetMeasurementById(int id)
+        {
+            return _measurements.Where(m => m.Id == id).FirstOrDefault();
+        }
+
         public TemperatureMeasurement AddMeasurement(TemperatureMeasurement measurement)
         {
             TemperatureMeasurement sanitizedMeasurement = SanitizeMeasurement(measurement);

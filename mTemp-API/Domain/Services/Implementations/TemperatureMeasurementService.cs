@@ -11,7 +11,7 @@ namespace mTemp_API.Domain.Services.Implementations
 
         private static readonly string[] AllowedMeasuredMethods = new[]
 {
-            "Infrared", "Contact(Axillary)", "Contact(Oral)", "Contact(Rectal)"
+            "Infrared", "Contact (Axillary)", "Contact (Oral)", "Contact (Rectal)"
         };
 
 
@@ -32,6 +32,16 @@ namespace mTemp_API.Domain.Services.Implementations
             return _temperatureMeasurementsRepository.GetMeasurementsByPatient(patientById);
         }
 
+        public TemperatureMeasurement GetMeasurementById(int id)
+        {
+            TemperatureMeasurement? byId = _temperatureMeasurementsRepository.GetMeasurementById(id);
+            if (byId == null)
+            {
+                throw new TemperatueMeasurementNotFoundException(id);
+            }
+            return byId;
+
+        }
 
         public IEnumerable<TemperatureMeasurement> GetAllMeasurements()
         {

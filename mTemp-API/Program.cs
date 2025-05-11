@@ -16,6 +16,17 @@ builder.Services.AddSingleton<IPatientsRepository, InMemoryPatientsRepository>()
 builder.Services.AddSingleton<ITemperatureMeasurementsRepository, InMemoryTemperatureMeasurementsRepository>();
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<ITemperatureMeasurementService, TemperatureMeasurementService>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost", policy =>
+    {
+        policy
+            .SetIsOriginAllowed(origin =>
+                new Uri(origin).Host.Equals("localhost", StringComparison.OrdinalIgnoreCase))
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -24,6 +35,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors("AllowLocalhost");
     app.UseSwagger();
     app.UseSwaggerUI();
 }
@@ -37,3 +49,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// TODO
+// - readme
+// - unit tests
+// - documentation of methods
+// - swagger annotations

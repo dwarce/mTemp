@@ -25,6 +25,12 @@ public class ExceptionHandlingMiddleware
             context.Response.ContentType = "application/json";
             await context.Response.WriteAsJsonAsync(new { message = ex.Message });
         }
+        catch (TemperatueMeasurementNotFoundException ex)
+        {
+            context.Response.StatusCode = 404; // Not Found
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsJsonAsync(new { message = ex.Message });
+        }
         catch (InvalidTemperatureMeasurementDataException ex)
         {
             context.Response.StatusCode = 400; // Bad Request
