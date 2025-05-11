@@ -5,12 +5,11 @@
     "version": "1.0"
   },
   "paths": {
-    "/WeatherForecast": {
+    "/Patients": {
       "get": {
         "tags": [
-          "WeatherForecast"
+          "Patients"
         ],
-        "operationId": "GetWeatherForecast",
         "responses": {
           "200": {
             "description": "OK",
@@ -19,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
+                    "$ref": "#/components/schemas/PatientDTO"
                   }
                 }
               },
@@ -27,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
+                    "$ref": "#/components/schemas/PatientDTO"
                   }
                 }
               },
@@ -35,7 +34,185 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
+                    "$ref": "#/components/schemas/PatientDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Patients"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TemperatureMeasurement": {
+      "get": {
+        "tags": [
+          "TemperatureMeasurement"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TemperatureMeasurement"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/TemperatureMeasurement/byPatient": {
+      "get": {
+        "tags": [
+          "TemperatureMeasurement"
+        ],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureMeasurementDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TemperatureMeasurementDTO"
                   }
                 }
               }
@@ -47,24 +224,50 @@
   },
   "components": {
     "schemas": {
-      "WeatherForecast": {
+      "PatientDTO": {
         "type": "object",
         "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },
-          "temperatureF": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TemperatureMeasurementDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "measuredTemperature": {
+            "type": "number",
+            "format": "double"
+          },
+          "measuredMethod": {
+            "type": "string",
+            "nullable": true
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "patientId": {
             "type": "integer",
             "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
-            "type": "string",
             "nullable": true
           }
         },

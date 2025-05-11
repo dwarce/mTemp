@@ -9,6 +9,11 @@ namespace mTemp_API.Domain.Services.Implementations
         private readonly IPatientsRepository _patientsRepository;
         private readonly ITemperatureMeasurementsRepository _temperatureMeasurementsRepository;
 
+        private static readonly string[] AllowedMeasuredMethods = new[]
+{
+            "Infrared", "Contact(Axillary)", "Contact(Oral)", "Contact(Rectal)"
+        };
+
 
         public TemperatureMeasurementService(IPatientsRepository patientsRepository, ITemperatureMeasurementsRepository temperatureMeasurementsRepository)
         {
@@ -77,7 +82,12 @@ namespace mTemp_API.Domain.Services.Implementations
             if (string.IsNullOrWhiteSpace(measurement.MeasuredMethod))
             {
                 throw new InvalidTemperatureMeasurementDataException("Measured method cannot be null or empty");
+
+            } else if (!AllowedMeasuredMethods.Contains(measurement.MeasuredMethod))
+            {
+                throw new InvalidTemperatureMeasurementDataException($"Specified measured method {measurement.MeasuredMethod} is not allowed");
             }
+
 
         }
     }

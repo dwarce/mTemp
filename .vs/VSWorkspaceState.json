@@ -1,16 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\mTemp-API",
-    "\\mTemp-API\\mTemp-API",
-    "\\mTemp-API\\mTemp-API\\Adapters",
-    "\\mTemp-API\\mTemp-API\\Adapters\\Controllers",
-    "\\mTemp-API\\mTemp-API\\Adapters\\Middleware",
-    "\\mTemp-API\\mTemp-API\\Domain",
-    "\\mTemp-API\\mTemp-API\\Domain\\Exceptions",
-    "\\mTemp-API\\mTemp-API\\Domain\\Models",
-    "\\mTemp-API\\mTemp-API\\Properties"
+    ""
   ],
-  "SelectedNode": "\\mTemp-API\\mTemp-API\\Domain\\Services\\Implementations\\PatientService.cs",
+  "SelectedNode": "\\mTemp-API.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -34,6 +34,7 @@ namespace mTemp_API.Adapters.Util
         {
             return new PatientDTO
             {
+                Id = patient.Id,
                 FirstName = patient.FirstName,
                 LastName = patient.LastName,
                 email = patient.Email,

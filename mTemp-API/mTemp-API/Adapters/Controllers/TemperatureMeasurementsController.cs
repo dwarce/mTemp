@@ -32,6 +32,15 @@ namespace mTemp_API.Adapters.Controllers
             return Ok(measurements);
         }
 
+        [HttpGet("byPatient")]
+        public ActionResult<IEnumerable<TemperatureMeasurementDTO>> GetTemperatureMeasurementsByPatient(int patientId)
+        {
+            IEnumerable<TemperatureMeasurementDTO> measurements = _temperatureMeasurementService
+                .GetMeasurementsByPatient(patientId)
+                .Select(ConverterDTO.TemperatureMeasurementToDTO)
+                .ToList();
+            return Ok(measurements);
+        }
 
         [HttpPost]
         public ActionResult<TemperatureMeasurementDTO> AddTemperatureMeasurement([FromBody] TemperatureMeasurementDTO temperatureMeasurementDTO)

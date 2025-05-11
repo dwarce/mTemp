@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mTemp-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6c6ef776c5cc9e1de6ec3624dfb73dce46dbce0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bff4d4ff9c2654d492a35630261e51ea9ce7796")]
 [assembly: System.Reflection.AssemblyProductAttribute("mTemp-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mTemp-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
