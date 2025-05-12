@@ -15,7 +15,7 @@ namespace mTemp_API.Domain.Repositories
         Patient? FindPatientByEmail(string email);
         
         /// <summary>
-        /// persists the patient to the database
+        /// sanitizes input and persists the patient to the database
         /// </summary>
         /// <returns>the patient with the id set</returns>
         Patient AddPatient(Patient patient);

@@ -59,5 +59,3 @@ app.Run();
 // TODO
 // - readme
 // - unit tests
-// - documentation of methods
-// - swagger annotations

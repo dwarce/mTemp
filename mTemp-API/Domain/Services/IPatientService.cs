@@ -8,7 +8,7 @@ namespace mTemp_API.Domain.Services
         IEnumerable<Patient> GetAllPatients();
 
         /// <summary>
-        /// Creates a new patient in the database
+        /// Validates input and creates a new patient in the database
         /// </summary>
         /// <returns>the patient with the id set</returns>
         Patient AddPatient(Patient patient);

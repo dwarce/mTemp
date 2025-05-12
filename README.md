@@ -1,14 +1,5 @@
 
-
-
-
-
-
-
-
-
-
- <div align="center">      
+<div align="center">      
   <h1>mTEMP</h1>      
 </div>      
 
@@ -16,6 +7,7 @@
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [Run](#run)
+- [Application description](#application-description)
 
 
 <table>      
@@ -109,3 +101,25 @@ Before running the projects, make sure you have the following installed:
     
     -   This will start the Vue.js app and typically run at `http://localhost:5173/`.
 
+
+## Application description
+
+### Backend
+The mTemp-API project provides REST endpoints to handle requests and manage temperature measurements and patient data.
+Database is implemented as in-memory database, all database table representations are implemented as arrays.
+
+1. Folder structure:
+  - Adapters
+    - Controllers (contains REST endpoints that use domain services)
+    - DTO (contains DTO classes which are used for data communication between backend and frontend)
+    - Middleware (contains ExceptionHandlingMiddleware, that handles all exceptions thrown by API and specifies what data is written to response in case of exception)
+    - Util (contains util services that provide static methods, such as: converting domain models to DTOs, time value converters)
+  - Domain
+    - Exceptions (contains all Exception classes that are used in the domain services)
+    - Models (contains all domain data classes - database table representations)
+    - Repositories (contains the interfaces of the data persistence logic with implementations of in-memory database)
+    - Services (contains all domain services that hold domain logic and are used by REST controllers. services use repositories to fetch and write data. These services also do domain data validation)
+
+
+### Frontend
+The mtemp-webapp provides a vue web application that uses REST services, exposed by mTemp-API.
