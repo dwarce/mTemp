@@ -1,5 +1,8 @@
 namespace mTemp_API.Adapters.Util
 {
+    /// <summary>
+    /// Utility class for converting between DateTime and UNIX milliseconds.
+    /// </summary>
     public static class TimeConverter
     {
         /// <summary>

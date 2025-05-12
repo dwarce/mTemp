@@ -6,6 +6,10 @@ using mTemp_API.Domain.Services;
 
 namespace mTemp_API.Adapters.Controllers
 {
+
+    /// <summary>
+    /// Controller for managing patients.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class PatientsController: ControllerBase
@@ -15,6 +19,11 @@ namespace mTemp_API.Adapters.Controllers
 
         private readonly ILogger<PatientsController> _logger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PatientsController"/> class.
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="patientService"></param>
         public PatientsController(ILogger<PatientsController> logger, IPatientService patientService)
         {
             _logger = logger;

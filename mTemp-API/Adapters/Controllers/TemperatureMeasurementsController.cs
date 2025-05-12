@@ -6,6 +6,10 @@ using mTemp_API.Domain.Services;
 
 namespace mTemp_API.Adapters.Controllers
 {
+
+    /// <summary>
+    /// Controller for managing temperature measurements.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class TemperatureMeasurementController : ControllerBase
@@ -14,7 +18,11 @@ namespace mTemp_API.Adapters.Controllers
 
         private readonly ILogger<TemperatureMeasurementController> _logger;
 
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TemperatureMeasurementController"/> class.
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="temperatureMeasurementService"></param>
         public TemperatureMeasurementController(ILogger<TemperatureMeasurementController> logger, ITemperatureMeasurementService temperatureMeasurementService)
         {
             _logger = logger;

@@ -101,6 +101,16 @@ Before running the projects, make sure you have the following installed:
     
     -   This will start the Vue.js app and typically run at `http://localhost:5173/`.
 
+#### Running Unit-tests
+1.  Open the `mTemp-API` or `mTemp-API.Test` folder in Visual Studio.
+    
+2.  Run tests:
+    
+    -   Open **Terminal** in Visual Studio and use the commands:
+    ```bash
+    dotnet test
+    ```
+    - Results will display at the bottom of input
 
 ## Application description
 

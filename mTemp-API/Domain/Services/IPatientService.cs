@@ -2,6 +2,9 @@ using mTemp_API.Domain.Models;
 
 namespace mTemp_API.Domain.Services
 {
+    /// <summary>
+    /// Service for managing patients.
+    /// </summary>
     public interface IPatientService
     {
         /// <returns>All the patients</returns>

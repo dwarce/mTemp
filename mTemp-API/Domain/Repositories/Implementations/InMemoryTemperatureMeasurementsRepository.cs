@@ -2,6 +2,9 @@ using mTemp_API.Domain.Models;
 
 namespace mTemp_API.Domain.Repositories.Implementations
 {
+    /// <summary>
+    /// In-memory implementation of the ITemperatureMeasurementsRepository interface.
+    /// </summary>
     public class InMemoryTemperatureMeasurementsRepository : ITemperatureMeasurementsRepository
     {
 
@@ -9,18 +12,38 @@ namespace mTemp_API.Domain.Repositories.Implementations
         private List<TemperatureMeasurement> _measurements = new() { };
 
 
-
+        /// <summary>
+        /// Returns all temperature measurements in the database.
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<TemperatureMeasurement> GetAllMeasurements() => _measurements;
+
+
+        /// <summary>
+        /// Returns the temperature measurements that match the provided patient id, empty array if none of the measurements are assigned to patient
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
         public IEnumerable<TemperatureMeasurement> GetMeasurementsByPatient(Patient patient)
         {
             return _measurements.Where(m => m.PatientId == patient.Id);
         }
 
+        /// <summary>
+        /// Returns the temperature measurement that matches the id, null if none of the measurements match the id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public TemperatureMeasurement? GetMeasurementById(int id)
         {
             return _measurements.Where(m => m.Id == id).FirstOrDefault();
         }
 
+        /// <summary>
+        /// Sanitizes input and persists the temperature measurement to the database
+        /// </summary>
+        /// <param name="measurement"></param>
+        /// <returns></returns>
         public TemperatureMeasurement AddMeasurement(TemperatureMeasurement measurement)
         {
             TemperatureMeasurement sanitizedMeasurement = SanitizeMeasurement(measurement);
@@ -29,6 +52,13 @@ namespace mTemp_API.Domain.Repositories.Implementations
             return sanitizedMeasurement;
         }
 
+
+        /// <summary>
+        /// Sanitizes input, sets patient data to measurement and persists the temperature measurement to the database
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <param name="measurement"></param>
+        /// <returns></returns>
         public TemperatureMeasurement AddPatientMeasurement(Patient patient, TemperatureMeasurement measurement)
         {
             TemperatureMeasurement sanitizedMeasurement = SanitizeMeasurement(measurement);

@@ -62,7 +62,7 @@ namespace mTemp_API.Test
 
             _mockPatientsRepository
                 .Setup(repo => repo.FindPatientByEmail(newPatient.Email))
-                .Returns((Patient)null);
+                .Returns((Patient?) null);
 
             _mockPatientsRepository
                 .Setup(repo => repo.AddPatient(newPatient))
@@ -107,7 +107,7 @@ namespace mTemp_API.Test
             int patientId = 1;
             _mockPatientsRepository
                 .Setup(repo => repo.GetPatientById(patientId))
-                .Returns((Patient)null);
+                .Returns((Patient?)null);
 
             // Act & Assert
             Assert.Throws<PatientNotFoundException>(() => _measurementService.GetMeasurementsByPatient(patientId));

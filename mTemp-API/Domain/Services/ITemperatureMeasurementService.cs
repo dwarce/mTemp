@@ -2,6 +2,9 @@ using mTemp_API.Domain.Models;
 
 namespace mTemp_API.Domain.Services
 {
+    /// <summary>
+    /// Service for managing temperature measurements.
+    /// </summary>
     public interface ITemperatureMeasurementService
     {
         /// <returns>All the measurements in the database</returns>

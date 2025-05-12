@@ -3,8 +3,16 @@ using mTemp_API.Domain.Models;
 
 namespace mTemp_API.Adapters.Util
 {
+    /// <summary>
+    /// Utility class for converting between domain models and DTOs.
+    /// </summary>
     public class ConverterDTO
     {
+        /// <summary>
+        /// Converts a TemperatureMeasurementDTO to a TemperatureMeasurement domain model.
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public static TemperatureMeasurement TemperatureMeasurementToDomain(TemperatureMeasurementDTO dto)
         {
             return new TemperatureMeasurement
@@ -16,6 +24,12 @@ namespace mTemp_API.Adapters.Util
                 Timestamp = TimeConverter.FromUnixMilliseconds(dto.Timestamp)
             };
         }
+
+        /// <summary>
+        /// Converts a TemperatureMeasurement domain model to a TemperatureMeasurementDTO.
+        /// </summary>
+        /// <param name="domain"></param>
+        /// <returns></returns>
 
         public static TemperatureMeasurementDTO TemperatureMeasurementToDTO(TemperatureMeasurement domain)
         {
@@ -30,6 +44,12 @@ namespace mTemp_API.Adapters.Util
             };
         }
 
+        /// <summary>
+        /// Converts a PatientDTO to a Patient domain model.
+        /// </summary>
+        /// <param name="patient"></param>
+        /// <returns></returns>
+
         public static PatientDTO PatientToDTO(Patient patient)
         {
             return new PatientDTO
@@ -41,6 +61,12 @@ namespace mTemp_API.Adapters.Util
             };
 
         }
+
+        /// <summary>
+        /// Converts a Patient domain model to a PatientDTO.
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
 
         public static Patient PatientToDomain(PatientDTO dto)
         {

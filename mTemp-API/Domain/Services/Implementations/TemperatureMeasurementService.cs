@@ -4,24 +4,38 @@ using mTemp_API.Domain.Repositories;
 
 namespace mTemp_API.Domain.Services.Implementations
 {
+    /// <summary>
+    /// Service for managing temperature measurements.
+    /// </summary>
     public class TemperatureMeasurementService : ITemperatureMeasurementService
     {
         private readonly IPatientsRepository _patientsRepository;
         private readonly ITemperatureMeasurementsRepository _temperatureMeasurementsRepository;
 
         private static readonly string[] AllowedMeasuredMethods = new[]
-{
+        {
             "Infrared", "Contact (Axillary)", "Contact (Oral)", "Contact (Rectal)"
         };
 
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TemperatureMeasurementService"/> class.
+        /// </summary>
+        /// <param name="patientsRepository"></param>
+        /// <param name="temperatureMeasurementsRepository"></param>
         public TemperatureMeasurementService(IPatientsRepository patientsRepository, ITemperatureMeasurementsRepository temperatureMeasurementsRepository)
         {
             _patientsRepository = patientsRepository;
             _temperatureMeasurementsRepository = temperatureMeasurementsRepository;
         }
 
-        
+
+        /// <summary>
+        /// Returns all temperature measurements, assigned to the specified patient in the database.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns></returns>
+        /// <exception cref="PatientNotFoundException"></exception>
         public IEnumerable<TemperatureMeasurement> GetMeasurementsByPatient(int patientId)
         {
             Patient? patientById = _patientsRepository.GetPatientById(patientId);
@@ -32,6 +46,13 @@ namespace mTemp_API.Domain.Services.Implementations
             return _temperatureMeasurementsRepository.GetMeasurementsByPatient(patientById);
         }
 
+
+        /// <summary>
+        /// Returns temperature measurement that matches the id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="TemperatueMeasurementNotFoundException"></exception>
         public TemperatureMeasurement GetMeasurementById(int id)
         {
             TemperatureMeasurement? byId = _temperatureMeasurementsRepository.GetMeasurementById(id);
@@ -43,17 +64,27 @@ namespace mTemp_API.Domain.Services.Implementations
 
         }
 
+
+        /// <summary>
+        /// Returns all temperature measurements, inserted in the database.
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<TemperatureMeasurement> GetAllMeasurements()
         {
             return _temperatureMeasurementsRepository.GetAllMeasurements();
         }
 
 
+        /// <summary>
+        /// Creates a new temperature measurement in the database, automatically sets the id and timestamp.
+        /// </summary>
+        /// <param name="measurement"></param>
+        /// <returns></returns>
+        /// <exception cref="PatientNotFoundException"></exception>
         public TemperatureMeasurement AddMeasurement(TemperatureMeasurement measurement)
         {
             checkValidMeasurement(measurement);
             measurement.Timestamp = DateTime.UtcNow; // Set to current UTC time
-
 
             // if patient id is set, we check if the patient exists and call the AddPatientMeasurement method, otherwise we call the AddMeasurement method
             if (measurement.PatientId != null) 

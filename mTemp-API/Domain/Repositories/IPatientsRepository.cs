@@ -2,6 +2,9 @@ using mTemp_API.Domain.Models;
 
 namespace mTemp_API.Domain.Repositories
 {
+    /// <summary>
+    /// Interface for the Patients repository.
+    /// </summary>
     public interface IPatientsRepository
     {
         /// <returns>All the patient in the database - non pageable</returns>

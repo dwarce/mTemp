@@ -3,6 +3,9 @@ using mTemp_API.Domain.Models;
 
 namespace mTemp_API.Domain.Repositories
 {
+    /// <summary>
+    /// Interface for the TemperatureMeasurements repository.
+    /// </summary>
     public interface ITemperatureMeasurementsRepository
     {
         /// <returns>All the temperature measurements in the database - non pageable</returns>
