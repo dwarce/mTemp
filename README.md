@@ -44,7 +44,7 @@ Before running the projects, make sure you have the following installed:
     npm -v
     ```
 
-- **Vite** — A modern, fast build tool for Vue.js projects.
+- **Optional: Vite** — A modern, fast build tool for Vue.js projects.
   - Install globally with npm:
     ```bash
     npm install -g create-vite
