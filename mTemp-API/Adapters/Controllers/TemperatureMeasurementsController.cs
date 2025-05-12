@@ -22,6 +22,10 @@ namespace mTemp_API.Adapters.Controllers
         }
 
 
+        /// <summary>
+        /// Returns all temperature measurements, inserted in the database.
+        /// </summary>
+        /// <returns>A list of TemperatureMeasurementDTO objects.</returns>
         [HttpGet]
         public ActionResult<IEnumerable<TemperatureMeasurementDTO>> GetAllTemperatureMeasurements()
         {
@@ -32,6 +36,10 @@ namespace mTemp_API.Adapters.Controllers
             return Ok(measurements);
         }
 
+        /// <summary>
+        /// Returns all temperature measurements, assigned to the specified patient in the database.
+        /// </summary>
+        /// <returns>A list of TemperatureMeasurementDTO objects.</returns>
         [HttpGet("byPatient")]
         public ActionResult<IEnumerable<TemperatureMeasurementDTO>> GetTemperatureMeasurementsByPatient(int patientId)
         {
@@ -42,6 +50,10 @@ namespace mTemp_API.Adapters.Controllers
             return Ok(measurements);
         }
 
+        /// <summary>
+        /// Returns temperature measurement that matches the id.
+        /// </summary>
+        /// <returns>A single TemperatureMeasurementDTO object</returns>
         [HttpGet("byId")]
         public ActionResult<TemperatureMeasurementDTO> GetTemperatureMeasurementById(int id)
         {
@@ -49,6 +61,10 @@ namespace mTemp_API.Adapters.Controllers
             return Ok(ConverterDTO.TemperatureMeasurementToDTO(measurement));
         }
 
+        /// <summary>
+        /// Creates a new temperature measurement in the database. Automatically assigns id and measurement timestamp
+        /// </summary>
+        /// <returns>A TemperatureMeasurementDTO object representation of inserted measurement</returns>
         [HttpPost]
         public ActionResult<TemperatureMeasurementDTO> AddTemperatureMeasurement([FromBody] TemperatureMeasurementDTO temperatureMeasurementDTO)
         {

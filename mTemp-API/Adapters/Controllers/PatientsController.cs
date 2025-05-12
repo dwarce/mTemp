@@ -21,6 +21,10 @@ namespace mTemp_API.Adapters.Controllers
             _patientService = patientService;
         }
 
+        /// <summary>
+        /// Returns all patients, inserted in the database.
+        /// </summary>
+        /// <returns>A list of PatientDTO objects.</returns>
         [HttpGet]
         public ActionResult<IEnumerable<PatientDTO>> GetAllPatients()
         {
@@ -31,6 +35,11 @@ namespace mTemp_API.Adapters.Controllers
             return Ok(patientsDTOList);
         }
 
+
+        /// <summary>
+        /// Creates a new patient in the database, automatically sets the id.
+        /// </summary>
+        /// <returns>A PatientDTO object representation of inserted Patient</returns>
         [HttpPost]
         public ActionResult<PatientDTO> AddPatient([FromBody] PatientDTO patientDTO)
         {
