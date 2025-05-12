@@ -55,7 +55,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-// TODO
-// - readme
-// - unit tests
