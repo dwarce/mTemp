@@ -17,14 +17,14 @@ namespace mTemp_API.Domain.Services.Implementations
         }
 
 
-        Patient IPatientService.AddPatient(Patient patient)
+        public Patient AddPatient(Patient patient)
         {
             checkValidPatient(patient);
             return _patientsRepository.AddPatient(patient);
         }
 
 
-        IEnumerable<Patient> IPatientService.GetAllPatients() => _patientsRepository.GetAllPatients();
+        public IEnumerable<Patient> GetAllPatients() => _patientsRepository.GetAllPatients();
 
 
         /// <summary>

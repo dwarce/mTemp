@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mTemp-API", "mTemp-API.csproj", "{417C9904-CDA8-4441-95C2-C556623DA596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mTemp-API.Test", "..\mTemp-API.Test\mTemp-API.Test.csproj", "{F10806FB-A5F1-48BD-AA08-6FFACB6FB61E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{417C9904-CDA8-4441-95C2-C556623DA596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{417C9904-CDA8-4441-95C2-C556623DA596}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{417C9904-CDA8-4441-95C2-C556623DA596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10806FB-A5F1-48BD-AA08-6FFACB6FB61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10806FB-A5F1-48BD-AA08-6FFACB6FB61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10806FB-A5F1-48BD-AA08-6FFACB6FB61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10806FB-A5F1-48BD-AA08-6FFACB6FB61E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

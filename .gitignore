@@ -1,6 +1,8 @@
 # Ignore build results
 mTemp-API/bin/
 mTemp-API/obj/
+mTemp-API.Test/bin/
+mTemp-API.Test/obj/
 
 # User-specific files
 mTemp-API/*.user
@@ -8,7 +10,11 @@ mTemp-API/*.rsuser
 mTemp-API/*.suo
 mTemp-API/*.userosscache
 mTemp-API/*.sln.docstates
-
+mTemp-API.Test/*.user
+mTemp-API.Test/*.rsuser
+mTemp-API.Test/*.suo
+mTemp-API.Test/*.userosscache
+mTemp-API.Test/*.sln.docstates
 # Rider
 .idea/
 
@@ -17,10 +23,12 @@ mTemp-API/*.sln.docstates
 
 # Logs
 mTemp-API/*.log
+mTemp-API.Test/*.log
 logs/
 
 # ASP.NET Secret Manager
 mTemp-API/secrets.json
+mTemp-API.Test/secrets.json
 
 # Dotnet Tools
 .dotnet-tools.json
@@ -28,10 +36,15 @@ mTemp-API/secrets.json
 # Test results
 mTemp-API/TestResults/
 mTemp-API/*.trx
-mTemp-API/coverage/
+mTemp-API.Test/coverage/
+mTemp-API.Test/TestResults/
+mTemp-API.Test/*.trx
+mTemp-API.Test/coverage/
 
 # Auto-generated files
 mTemp-API/Generated_Code/
+mTemp-API.Test/Generated_Code/
+
 
 # Local NuGet packages
 *.nupkg
@@ -40,3 +53,5 @@ mTemp-API/Generated_Code/
 # Others
 mTemp-API/.vs/
 mTemp-API/packages/
+mTemp-API.Test/.vs/
+mTemp-API.Test/packages/
