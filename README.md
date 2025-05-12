@@ -3,13 +3,6 @@
   <h1>mTEMP</h1>      
 </div>      
 
-
-- [Prerequisites](#prerequisites)
-- [Setup Instructions](#setup-instructions)
-- [Run](#run)
-- [Application description](#application-description)
-
-
 <table>      
 <tr>      
 This repository contains a full-stack demo temperature monitoring application with:
@@ -18,6 +11,15 @@ This repository contains a full-stack demo temperature monitoring application wi
 - **Frontend App**: Built with Vue 3 + TypeScript + PrimeVue (`mtemp-webapp` folder)</tr>      
 </table>      
 The frontend communicates with the backend API to manage temperature measurements.
+
+
+
+
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Run](#run)
+- [Application description](#application-description)
+
 
 
 
